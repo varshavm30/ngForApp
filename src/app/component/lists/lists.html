@@ -1,0 +1,41 @@
+
+<!-- <ul class="list-group">
+    @for( s of skills; track i ; let i = $index){
+        <li class="list-group-item"> 
+            {{s}}
+         </li>
+    }
+   
+</ul> -->
+
+<!-- //itearating elemnt inside curry bracess -->
+<!-- ******************************************************** -->
+<!-- <ul class="list-group">
+    @for( s of skills; track i ;let i=$index; let isEven = $even; let isOdd = $odd){
+        <li class="list-group-item"
+         [class.bg-warning]="isOdd"
+         [class.bg-success]="isEven"> 
+            {{s}}
+         </li>
+    }
+   
+</ul> -->
+<!-- property binding change the bg color -->
+
+<!-- ******************************************************** -->
+ <!-- using ngClass >>adding class 
+  we have to import it in ts file without it it will show an error
+  bfore all these things are done by common module bcoz all structueral atribute direvtives given by common module 
+  so we hv not module here so also common module is not available that is why we hv to import it  -->
+<ul class="list-group mt-4 text-center">
+    @for( s of skills; track i ;let i=$index; let isEven = $even; let isOdd = $odd){
+        <li class="list-group-item"
+        [ngClass]="{
+            'bg-success':isEven,
+            'bg-warning':isOdd
+        }"> 
+            <strong>{{s}}</strong>
+         </li>
+    }
+   
+</ul>

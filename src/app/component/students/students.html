@@ -1,0 +1,23 @@
+
+<table class="table table-bordered table-striped">
+   <thead>
+    <tr>
+        <th>Sr No</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>stdId</th>
+    </tr>
+   </thead>
+   <tbody>
+    @for(std of stdArr;track std.stdId;let i  = $index){
+      <tr>
+        <td>{{i + 1}}</td>
+        <td>{{std.fname }} {{std.lname}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.contact}}</td>
+        <td>{{std.stdId}}</td>
+      </tr>
+    }
+   </tbody>
+</table>
